@@ -1,15 +1,132 @@
 /*
- Theme Name:   Astra Child
- Theme URI:    http://example.com/astra-child/
- Description:  Astra Child Theme
- Author:       Your Name
- Author URI:   http://example.com
+ Theme Name:   Promozone Italia
+ Theme URI:    https://promozoneitalia.it/
+ Description:  Promozone Italia - Coupon and Deals Website 
+ Author:       Nayan Ray
+ Author URI:   https://dev-nayanray.github.io/
  Template:     astra
  Version:      1.0.0
  Text Domain:  astra-child
 */
 
-/* Add your custom CSS below this line */
+ 
+ .ast-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 columns for large screens */
+    gap: 20px;
+    justify-content: center;
+}
 
-/* Custom Product Category Page Styles */
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Responsive for smaller screens, adjust as needed */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+
+.product-item {
+    border-radious: 0px;
+     padding:0px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+     
+}
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.product-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.ribbon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e6007e;
+    color: #fff;
+    padding: 7px 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.product-details {
+    padding: 20px;
+}
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.product-price {
+    font-size: 22px;
+    color: #e67e22;
+    font-weight: bold;
+}
+.product-location {
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+}
+.button {
+    display: inline-block;
+    background: #ff6f00;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.button:hover {
+    background: #e65c00;
+}
+.sorting-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.view-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+}
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .sorting-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .view-toggle {
+        margin-top: 10px;
+    }
+}
+ 
  
